@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 
 export default function Navigation() {
   const links = [
-    { text: "Home", path: "/" },
+    { text: "Home", path: "/DAY-Foundation" },
     { text: "About Us", path: "/about" },
     { text: "Our Work", path: "/work" },
     { text: "Get Involved", path: "/getinvolved" },

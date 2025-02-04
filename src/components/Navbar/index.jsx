@@ -4,6 +4,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import ClearIcon from "@mui/icons-material/Clear";
 import Navigation from "./Navigation";
 import MobileMenu from "./MobileMenu";
+import Logo from "../../assets/images/Logo.jpeg";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,7 +53,7 @@ export default function Navbar() {
             className="flex items-center space-x-4 cursor-pointer"
           >
             <img
-              src="/images/Logo.jpeg"
+              src={Logo}
               alt="DAY"
               className="h-12 w-12 backdrop-blur-sm rounded-full"
             />

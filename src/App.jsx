@@ -9,7 +9,6 @@ import Donations from "./pages/Donations";
 import GetInvolved from "./pages/GetInvolved";
 import Work from "./pages/Work";
 import Breaker from "./components/Breaker";
-import Hero from "./components/Hero";
 
 export default function App() {
   return (
@@ -19,7 +18,6 @@ export default function App() {
         {" "}
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/DAY-Foundation" element={<Home />} /> */}
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/donations" element={<Donations />} />

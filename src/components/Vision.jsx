@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Users,
-  GraduationCap,
-  Briefcase,
-  Heart,
-  HandHelping,
-} from "lucide-react";
+import { Users, GraduationCap, Briefcase, Heart } from "lucide-react";
 
 export default function Vision() {
   const visionPoints = [

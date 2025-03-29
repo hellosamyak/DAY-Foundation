@@ -2,7 +2,6 @@ import React from "react";
 import ContactInfo from "./ContactInfo";
 import QuickLinks from "./QuickLinks";
 import SocialLinks from "./SocialLinks";
-import Logo from "../../assets/images/Logo.jpeg";
 
 export default function Footer() {
   return (
@@ -11,8 +10,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <img
-              src={Logo}
-              alt="DAY Foundation Logo"
+              src="/Logo.jpeg"
+              alt="Logo"
               className="h-12 w-12 backdrop-blur-sm rounded-full mb-4"
             />
             <p className="text-sm leading-relaxed">

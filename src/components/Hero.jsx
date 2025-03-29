@@ -6,11 +6,13 @@ function Hero() {
   return (
     <div id="home" className="relative min-h-screen">
       <div className="absolute inset-0">
-        <img
-          src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
-          alt="Children learning"
-          className="w-full h-full object-cover"
-        />
+        <Link to="/">
+          <img
+            src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
+            alt="Children learning"
+            className="w-full h-full object-cover"
+          />
+        </Link>
         <div className="absolute inset-0 bg-gray-900/70 mix-blend-multiply" />
       </div>
 

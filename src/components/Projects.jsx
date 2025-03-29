@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Projects() {
   const projects = [
@@ -47,9 +48,11 @@ export default function Projects() {
                   {project.title}
                 </h3>
                 <p className="mt-2 text-gray-400">{project.description}</p>
-                <button className="mt-4 text-rose-300 hover:text-rose-400">
-                  View all projects →
-                </button>
+                <Link to="/work#projects">
+                  <button className="mt-4 text-rose-300 hover:text-rose-400">
+                    View all projects →
+                  </button>
+                </Link>
               </div>
             </div>
           ))}

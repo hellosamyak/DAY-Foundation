@@ -1,8 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import ProjectDetails from "../components/ProjectDetails";
 import Services from "../components/Services";
 
 const Work = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+
+    if (location.hash) {
+      const id = location.hash.substring(1);
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 0);
+    }
+  }, [location]);
+
   return (
     <div className="bg-gray-900 text-white">
       <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 py-24">

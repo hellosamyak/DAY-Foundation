@@ -160,7 +160,6 @@ export default function Contact() {
             </p>
           </div>
 
-          {/* Contact Info Section */}
           <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {contactDetails.map((contact, index) => (
               <div
@@ -178,7 +177,6 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Follow Us Section */}
       <section className="bg-gray-800 py-24 px-6">
         <div className="max-w-5xl mx-auto text-center">
           <h3 className="text-3xl font-bold text-white sm:text-4xl">

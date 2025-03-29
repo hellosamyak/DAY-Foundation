@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function Donations() {
   const [selectedAmount, setSelectedAmount] = useState("");
@@ -6,8 +6,14 @@ export default function Donations() {
 
   const donationOptions = ["₹1500", "₹3000", "₹6000", "₹12000"];
 
+  useEffect(() => {
+    if (selectedAmount) {
+      setCustomAmount(selectedAmount.replace("₹", ""));
+    }
+  }, [selectedAmount]);
+
   const handleDonate = () => {
-    const amount = selectedAmount || customAmount;
+    const amount = selectedAmount || (customAmount ? `₹${customAmount}` : "");
     if (amount) {
       alert(`Thank you for choosing to donate ${amount}!`);
     } else {
@@ -18,9 +24,13 @@ export default function Donations() {
   return (
     <div className="bg-gray-900 text-white">
       <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 py-24">
-        <h2 className="text-4xl font-extrabold sm:text-5xl mb-8 text-rose-400 drop-shadow-lg">
+        <h2 className="text-4xl font-extrabold sm:text-5xl mb-3 text-rose-400 drop-shadow-lg">
           Support the Cause
         </h2>
+        <p className="text-gray-300 mb-8 max-w-2xl">
+          Your generosity helps us create lasting change for those who need it
+          most.
+        </p>
         <div className="max-w-4xl w-full">
           <div className="bg-gradient-to-br from-gray-800 to-gray-700 rounded-2xl shadow-2xl p-10 sm:p-14">
             <h3 className="text-2xl font-semibold text-gray-100 mb-6">
@@ -38,7 +48,6 @@ export default function Donations() {
                   }`}
                   onClick={() => {
                     setSelectedAmount(amount);
-                    setCustomAmount("");
                   }}
                 >
                   {amount}
@@ -55,8 +64,9 @@ export default function Donations() {
               type="text"
               value={customAmount}
               onChange={(e) => {
-                setSelectedAmount("");
-                setCustomAmount(e.target.value);
+                const value = e.target.value;
+                setCustomAmount(value);
+                setSelectedAmount(value ? `₹${value}` : "");
               }}
               placeholder="₹ Other Amount"
               className="w-full bg-gray-800 text-white py-3 px-4 rounded-xl mb-6 outline-none focus:ring-2 focus:ring-rose-400"

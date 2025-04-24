@@ -7,7 +7,7 @@ import Accreditations from "../components/Accreditations";
 
 export default function Home() {
   return (
-    <div className="bg-gray-900 text-white">
+    <div className="bg-gray-900 text-white w-full overflow-x-hidden space-y-4 sm:space-y-8">
       <Hero />
       <Impact />
       <Goals />

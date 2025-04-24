@@ -7,13 +7,13 @@ const About = () => {
   return (
     <div>
       <div className="bg-gray-900 text-white">
-        <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 py-24">
-          <h2 className="text-4xl font-extrabold sm:text-5xl mb-8 text-rose-400 drop-shadow-lg">
+        <section className="min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6 py-16 sm:py-24">
+          <h2 className="text-3xl md:text-4xl font-extrabold lg:text-5xl mb-6 sm:mb-8 text-rose-400 drop-shadow-lg">
             About The DAY Foundation
           </h2>
           <div className="max-w-5xl w-full">
-            <div className="bg-gradient-to-br from-gray-800 to-gray-700 rounded-2xl shadow-2xl p-10 sm:p-14 transition-transform transform hover:scale-105">
-              <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
+            <div className="bg-gradient-to-br from-gray-800 to-gray-700 rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl p-6 sm:p-10 md:p-14 transition-transform transform hover:scale-105">
+              <p className="text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed">
                 <span className="font-semibold text-white">
                   The DAY Foundation (BHTDAY Welfare Foundation)
                 </span>
@@ -33,7 +33,7 @@ const About = () => {
                 .
               </p>
 
-              <p className="mt-6 text-lg sm:text-xl text-gray-300 leading-relaxed">
+              <p className="mt-4 sm:mt-6 text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed">
                 We are more than just an NGO—we are a{" "}
                 <span className="text-rose-400 font-semibold">
                   movement for change
@@ -43,7 +43,7 @@ const About = () => {
                 healthcare, and employment opportunities.
               </p>
 
-              <p className="mt-6 text-lg sm:text-xl text-gray-300 leading-relaxed">
+              <p className="mt-4 sm:mt-6 text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed">
                 Through sustainable social impact initiatives, we uplift
                 underserved sections of society by providing education to slum
                 children, organizing healthcare and welfare drives, engaging
@@ -52,7 +52,7 @@ const About = () => {
                 <span className="font-bold text-rose-400">"Rojgar."</span>
               </p>
 
-              <p className="mt-6 text-lg sm:text-xl text-gray-300 leading-relaxed">
+              <p className="mt-4 sm:mt-6 text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed">
                 With our unwavering commitment to{" "}
                 <span className="text-rose-400 font-semibold">
                   sustainable social impact

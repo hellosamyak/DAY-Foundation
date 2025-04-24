@@ -32,28 +32,30 @@ export default function Vision() {
   return (
     <div
       id="vision"
-      className="bg-gray-900 min-h-screen flex flex-col justify-center items-center py-24 px-6"
+      className="bg-gray-900 min-h-screen flex flex-col justify-center items-center py-12 sm:py-16 lg:py-24 px-2 sm:px-4 lg:px-6"
     >
-      <div className="max-w-6xl px-6 sm:px-8 lg:px-12 text-center">
-        <h2 className="text-3xl font-bold text-white sm:text-4xl">
+      <div className="w-full max-w-6xl px-4 sm:px-6 lg:px-12 text-center">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
           Our Vision
         </h2>
-        <p className="mt-6 text-lg sm:text-xl text-gray-300 leading-relaxed">
+        <p className="mt-4 sm:mt-6 text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed">
           Building an inclusive and empowered society through education,
           employment, and community-driven impact.
         </p>
 
-        <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-2">
+        <div className="mt-8 sm:mt-12 lg:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
           {visionPoints.map((vision, index) => (
             <div
               key={index}
-              className="bg-gray-800 rounded-2xl shadow-lg p-10 text-center transition-transform transform hover:scale-105"
+              className="bg-gray-800 rounded-2xl shadow-lg p-6 sm:p-8 lg:p-10 text-center transition-transform transform hover:scale-105"
             >
-              <vision.icon className="mx-auto h-14 w-14 text-rose-400" />
-              <p className="mt-6 text-2xl font-bold text-white">
+              <vision.icon className="mx-auto h-12 w-12 sm:h-14 sm:w-14 text-rose-400" />
+              <p className="mt-4 sm:mt-6 text-xl sm:text-2xl font-bold text-white">
                 {vision.title}
               </p>
-              <p className="mt-4 text-lg text-gray-400">{vision.description}</p>
+              <p className="mt-3 sm:mt-4 text-base sm:text-lg text-gray-400">
+                {vision.description}
+              </p>
             </div>
           ))}
         </div>

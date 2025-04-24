@@ -55,35 +55,35 @@ const ProjectDetails = () => {
   return (
     <div
       id="projects"
-      className="bg-gray-800 min-h-screen flex flex-col justify-center items-center py-24 px-6"
+      className="bg-gray-800 min-h-screen flex flex-col justify-center items-center py-12 sm:py-16 lg:py-24 px-2 sm:px-4 lg:px-6"
     >
-      <div className="max-w-6xl px-6 sm:px-8 lg:px-12 text-center">
-        <h2 className="text-3xl font-bold text-white sm:text-4xl">
+      <div className="w-full max-w-6xl px-4 sm:px-6 lg:px-12 text-center">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
           Our Projects
         </h2>
-        <p className="mt-6 text-lg sm:text-xl text-gray-300 leading-relaxed">
+        <p className="mt-4 sm:mt-6 text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed">
           Empowering communities through impactful initiatives that address
           education, health, gender equity, and sustainability.
         </p>
 
-        <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-2">
+        <div className="mt-8 sm:mt-12 lg:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-gray-900 rounded-2xl shadow-lg p-10 transition-transform transform hover:scale-105"
+              className="bg-gray-900 rounded-2xl shadow-lg p-6 sm:p-8 lg:p-10 transition-transform transform hover:scale-105"
             >
               <img
                 src={project.image}
                 alt={project.title}
-                className="mx-auto h-40 w-full object-cover rounded-xl mb-6"
+                className="mx-auto h-32 sm:h-36 lg:h-40 w-full object-cover rounded-xl mb-4 sm:mb-6"
               />
-              <p className="text-2xl font-bold text-white mb-4">
+              <p className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">
                 {project.title}
               </p>
-              <p className="text-lg font-semibold text-rose-400 mb-4">
+              <p className="text-base sm:text-lg font-semibold text-rose-400 mb-3 sm:mb-4">
                 {project.objective}
               </p>
-              <ul className="text-lg text-gray-400 list-disc list-inside space-y-2">
+              <ul className="text-sm sm:text-base lg:text-lg text-gray-400 list-disc list-inside space-y-1 sm:space-y-2">
                 {project.details.map((detail, idx) => (
                   <li key={idx}>{detail}</li>
                 ))}

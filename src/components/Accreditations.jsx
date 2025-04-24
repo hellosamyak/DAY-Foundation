@@ -22,40 +22,50 @@ export default function Accreditations() {
   ];
 
   return (
-    <div id="accreditations" className="bg-gray-800 py-24 h-screen">
+    <div
+      id="accreditations"
+      className="bg-gray-800 py-12 sm:py-16 md:py-24 min-h-[80vh] sm:min-h-screen"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-white sm:text-4xl">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white md:text-4xl">
             Empanelment & Accreditations
           </h2>
-          <p className="mt-4 text-xl text-gray-400">
+          <p className="mt-3 sm:mt-4 text-base sm:text-lg md:text-xl text-gray-400">
             Recognized for our commitment to excellence and transparency
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div className="mt-8 sm:mt-12 md:mt-16 grid grid-cols-1 gap-4 sm:gap-6 md:gap-8 md:grid-cols-3">
           {accreditations.map((item, index) => (
-            <div key={index} className="bg-gray-900 rounded-lg p-8 text-center">
-              <item.icon className="mx-auto h-12 w-auto text-rose-300" />
-              <h3 className="mt-4 text-xl font-semibold text-white">
+            <div
+              key={index}
+              className="bg-gray-900 rounded-lg p-6 sm:p-8 text-center transition-transform hover:scale-105"
+            >
+              <item.icon className="mx-auto h-8 sm:h-10 md:h-12 w-auto text-rose-300" />
+              <h3 className="mt-3 sm:mt-4 text-lg sm:text-xl font-semibold text-white">
                 {item.title}
               </h3>
-              <p className="mt-2 text-gray-400">{item.description}</p>
+              <p className="mt-1 sm:mt-2 text-sm sm:text-base text-gray-400">
+                {item.description}
+              </p>
             </div>
           ))}
         </div>
 
-        <div className="mt-16 bg-gray-900 rounded-lg p-8">
-          <h3 className="text-2xl font-semibold text-white text-center">
+        <div className="mt-10 sm:mt-12 md:mt-16 bg-gray-900 rounded-lg p-6 sm:p-8">
+          <h3 className="text-xl sm:text-2xl font-semibold text-white text-center">
             Our Partnerships
           </h3>
-          <div className="mt-8 grid grid-cols-2 gap-8 md:grid-cols-4">
+          <div className="mt-6 sm:mt-8 grid grid-cols-1 xs:grid-cols-2 gap-4 sm:gap-6 md:gap-8 md:grid-cols-4">
             {[1, 2, 3, 4].map((_, index) => (
               <div
                 key={index}
-                className="h-20 bg-gray-800/50 rounded-lg flex items-center justify-center"
+                className="h-16 sm:h-20 bg-gray-800/50 rounded-lg flex items-center justify-center"
               >
-                <span className="text-gray-400">Partner Logo</span>
+                <span className="text-gray-400 text-sm sm:text-base">
+                  Partner Logo
+                </span>
               </div>
             ))}
           </div>

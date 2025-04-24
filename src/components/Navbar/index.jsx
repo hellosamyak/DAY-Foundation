@@ -10,6 +10,11 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
 
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
+
   useEffect(() => {
     let ticking = false;
     const handleScroll = () => {
@@ -33,6 +38,10 @@ export default function Navbar() {
     };
   }, [isOpen]);
 
+  const handleCloseMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <nav
       className={`fixed w-full z-50 transition-colors duration-300 ${
@@ -48,6 +57,7 @@ export default function Navbar() {
                 e.preventDefault();
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }
+              handleCloseMenu();
             }}
             className="flex items-center space-x-4 cursor-pointer"
           >
@@ -84,7 +94,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      <MobileMenu isOpen={isOpen} />
+      <MobileMenu isOpen={isOpen} onClose={handleCloseMenu} />
     </nav>
   );
 }

@@ -1,44 +1,41 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
 
-export default function MobileMenu({ isOpen }) {
+export default function MobileMenu({ isOpen, onClose }) {
   if (!isOpen) return null;
 
+  const links = [
+    { text: "Home", path: "/" },
+    { text: "About Us", path: "/about" },
+    { text: "Our Work", path: "/work" },
+    { text: "Get Involved", path: "/getinvolved" },
+    { text: "Contact Us", path: "/contact" },
+  ];
+
   return (
-    <div className="md:hidden bg-gray-900/95 backdrop-blur-sm">
-      <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-        <a
-          href="#home"
-          className="text-white hover:text-rose-200 block px-3 py-2 text-base font-medium"
-        >
-          Home
-        </a>
-        <a
-          href="#mission"
-          className="text-white hover:text-rose-200 block px-3 py-2 text-base font-medium"
-        >
-          Mission
-        </a>
-        <a
-          href="#stories"
-          className="text-white hover:text-rose-200 block px-3 py-2 text-base font-medium"
-        >
-          Stories
-        </a>
-        <a
-          href="#campaigns"
-          className="text-white hover:text-rose-200 block px-3 py-2 text-base font-medium"
-        >
-          Campaigns
-        </a>
-        <a
-          href="#about"
-          className="text-white hover:text-rose-200 block px-3 py-2 text-base font-medium"
-        >
-          About
-        </a>
-        <button className="w-full bg-rose-100 text-gray-900 px-4 py-2 rounded-md text-sm font-medium hover:bg-rose-200 mt-4">
-          Donate
-        </button>
+    <div className="md:hidden absolute top-20 left-0 right-0 bg-gray-900/95 backdrop-blur-sm z-50 w-full">
+      <div className="px-4 pt-4 pb-6 space-y-2">
+        {links.map((link) => (
+          <NavLink
+            key={link.text}
+            to={link.path}
+            onClick={onClose}
+            className={({ isActive }) =>
+              `block px-3 py-3 text-lg font-medium ${
+                isActive ? "text-rose-400" : "text-white hover:text-rose-200"
+              }`
+            }
+          >
+            {link.text}
+          </NavLink>
+        ))}
+        <div className="pt-2">
+          <Link to="/donations" onClick={onClose}>
+            <button className="w-full bg-rose-500 text-white px-4 py-3 rounded text-lg font-medium hover:bg-rose-600 transition-all duration-300 ease-in-out">
+              Donate
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );

@@ -17,20 +17,27 @@ export default function QuickLinks() {
 
   return (
     <nav role="navigation" aria-label="Quick Links">
-      <h3 className="text-white font-semibold mb-4">Quick Links</h3>
-      <ul className="space-y-3">
+      {" "}
+      <h3 className="text-white font-semibold text-sm sm:text-base mb-3 sm:mb-4">
+        {" "}
+        Quick Links{" "}
+      </h3>{" "}
+      <ul className="space-y-2 sm:space-y-3">
+        {" "}
         {links.map((link) => (
           <li key={link.to}>
+            {" "}
             <Link
               to={link.to}
               aria-label={link.label}
-              className="text-sm hover:text-rose-200 transition duration-200"
+              className="text-xs sm:text-sm hover:text-rose-200 transition duration-200"
             >
-              {link.text}
-            </Link>
+              {" "}
+              {link.text}{" "}
+            </Link>{" "}
           </li>
-        ))}
-      </ul>
+        ))}{" "}
+      </ul>{" "}
     </nav>
   );
 }

@@ -22,18 +22,20 @@ export default function ContactInfo() {
 
   return (
     <div>
-      <h3 className="text-white font-semibold mb-4">Contact</h3>
-      <ul className="space-y-3">
+      <h3 className="text-white font-semibold text-sm sm:text-base mb-3 sm:mb-4">
+        Contact
+      </h3>
+      <ul className="space-y-2 sm:space-y-3">
         {contacts.map((contact, index) => (
-          <li key={index} className="flex items-center gap-3">
+          <li key={index} className="flex items-center gap-2 sm:gap-3">
             <div className="flex-shrink-0">
-              <contact.icon className="h-5 w-5" />
+              <contact.icon className="h-4 w-4 sm:h-5 sm:w-5 text-gray-300" />
             </div>
             <a
               href={contact.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm hover:underline hover:text-rose-200"
+              className="text-xs sm:text-sm hover:underline hover:text-rose-200"
             >
               {contact.text}
             </a>

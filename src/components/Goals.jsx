@@ -32,21 +32,30 @@ export default function Goal() {
   return (
     <div
       id="goal"
-      className="bg-gray-800 h-screen flex flex-col justify-center items-center py-24"
+      className="bg-gray-800 min-h-screen flex flex-col justify-center items-center py-12 sm:py-16 lg:py-24"
     >
-      <div className="max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl font-bold text-white sm:text-4xl">Our Goals</h2>
-        <p className="mt-4 text-xl text-gray-400">
+      <div className="w-full max-w-7xl px-2 sm:px-4 lg:px-8 text-center">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white">
+          Our Goals
+        </h2>
+        <p className="mt-2 sm:mt-4 text-lg sm:text-xl text-gray-400">
           We strive to make a lasting impact through education, aid, youth
           empowerment, and care, ensuring a better future for all.
         </p>
 
-        <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-8 sm:mt-12 lg:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {goals.map((goal, index) => (
-            <div key={index} className="bg-gray-900 rounded-lg p-8 text-center">
-              <goal.icon className="mx-auto h-12 w-12 text-rose-400" />
-              <p className="mt-4 text-2xl font-bold text-white">{goal.title}</p>
-              <p className="mt-2 text-gray-400">{goal.description}</p>
+            <div
+              key={index}
+              className="bg-gray-900 rounded-lg p-6 sm:p-8 text-center"
+            >
+              <goal.icon className="mx-auto h-10 w-10 sm:h-12 sm:w-12 text-rose-400" />
+              <p className="mt-3 sm:mt-4 text-xl sm:text-2xl font-bold text-white">
+                {goal.title}
+              </p>
+              <p className="mt-1 sm:mt-2 text-sm sm:text-base text-gray-400">
+                {goal.description}
+              </p>
             </div>
           ))}
         </div>

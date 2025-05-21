@@ -10,8 +10,7 @@ const projects = [
       "📌 Learning materials, stationery, and mentorship are provided for holistic growth.",
       "📌 Focus on interactive and engaging sessions to enhance learning experiences.",
     ],
-    image:
-      "https://images.unsplash.com/photo-1522661067900-ab829854a57f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cG9vciUyMGNoaWxkcmVuJTIwbGVhcm5pbmd8ZW58MHx8MHx8fDA%3D",
+    image: "/images/projects/udaan.jpeg",
   },
   {
     title: "Project Chetna – Prioritizing Health & Well-being",
@@ -22,8 +21,7 @@ const projects = [
       "📌 Mental health awareness through workshops, counseling sessions, and WHO Day events.",
       "📌 Yoga and wellness programs to promote holistic well-being.",
     ],
-    image:
-      "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGhlYWx0aCUyMGF3YXJlbmVzcyUyMHJ1cmFsfGVufDB8fDB8fHww",
+    image: "/images/projects/chetna.jpeg",
   },
   {
     title: "Shakti Samvaad Campaign – Empowering Women",
@@ -34,8 +32,7 @@ const projects = [
       "📌 Workshops on self-defense, gender rights, and economic independence for women.",
       "📌 Community-led initiatives to engage men and women in discussions on equality.",
     ],
-    image:
-      "https://images.unsplash.com/photo-1531301434368-e6cf6a04b3af?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHdvbWVuJTIwZW1wb3dlcm1lbnR8ZW58MHx8MHx8fDA%3D",
+    image: "/images/projects/shakti.jpeg",
   },
   {
     title: "Prakriti Raksha Pahal – A Greener Tomorrow",
@@ -46,8 +43,7 @@ const projects = [
       "📌 Cleanliness campaigns to promote hygiene and waste management in slum areas.",
       "📌 Awareness programs for children to instill environmental responsibility at a young age.",
     ],
-    image:
-      "https://images.unsplash.com/photo-1622254936966-4a3c4def576f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2F2ZSUyMGVudmlyb25tZW50fGVufDB8fDB8fHww",
+    image: "/images/projects/praksha.jpeg",
   },
 ];
 

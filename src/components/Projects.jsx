@@ -4,20 +4,17 @@ import { Link } from "react-router-dom";
 export default function Projects() {
   const projects = [
     {
-      image:
-        "https://images.unsplash.com/photo-1610500796385-3ffc1ae2f046?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2hpbGRyZW4lMjBzdHVkeWluZ3xlbnwwfHwwfHx8MA%3D%3D",
+      image: "/images/projects/udaan.jpeg",
       title: "Project Udaan",
       description: "A weekly educational drive.",
     },
     {
-      image:
-        "https://plus.unsplash.com/premium_photo-1661488569775-2f16dbefca71?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjl8fHBvb3IlMjB3b21lbnxlbnwwfHwwfHx8MA%3D%3D",
+      image: "/images/projects/shakti.jpeg",
       title: "Shakti Samvaad Campaign",
       description: "Dedicated to women's rights.",
     },
     {
-      image:
-        "https://images.unsplash.com/photo-1502781252888-9143ba7f074e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGhhcHB5JTIwY2hpbGRyZW58ZW58MHx8MHx8fDA%3D",
+      image: "/images/projects/chetna.jpeg",
       title: "Project Chetna",
       description: "Focused on the mental and physical well-being.",
     },

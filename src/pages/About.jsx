@@ -9,7 +9,7 @@ const About = () => {
       <div className="bg-gray-900 text-white">
         <section className="min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6 py-16 sm:py-24">
           <h2 className="text-3xl md:text-4xl font-extrabold lg:text-5xl mb-6 sm:mb-8 text-rose-400 drop-shadow-lg">
-            About The DAY Foundation
+            🧭About The DAY Foundation
           </h2>
           <div className="max-w-5xl w-full">
             <div className="bg-gradient-to-br from-gray-800 to-gray-700 rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl p-6 sm:p-10 md:p-14 transition-transform transform hover:scale-105">

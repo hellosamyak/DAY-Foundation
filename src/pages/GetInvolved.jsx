@@ -7,21 +7,41 @@ const GetInvolved = () => {
     <div className="bg-gray-900 text-white">
       <section className="min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6 py-16 sm:py-20">
         <h2 className="text-3xl md:text-4xl font-extrabold lg:text-5xl mb-6 sm:mb-8 text-rose-400 drop-shadow-lg">
-          Get Involved
+          🤝Get Involved
         </h2>
         <div className="max-w-5xl w-full px-2 sm:px-0">
           <div className="bg-gradient-to-br from-gray-800 to-gray-700 rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl p-6 sm:p-10 md:p-14 transition-transform transform hover:scale-105">
             <p className="text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed">
-              Want to make a difference? There are many ways to contribute to
-              social change with the{" "}
+              Want to make a difference? There are countless ways to become a
+              catalyst for change with the{" "}
               <span className="font-semibold text-white">DAY Foundation</span>.
-              Whether through volunteering, internships, or donations, your
-              efforts can transform lives. Join us in creating{""}{" "}
+              Whether you’re passionate about volunteering your time, gaining
+              real-world experience through internships, or making a heartfelt
+              donation,
               <span className="text-rose-400 font-medium">
-                sustainable impact by supporting education, healthcare, and
-                welfare initiatives
+                {" "}
+                your involvement has the power to transform lives and uplift
+                communities
               </span>
-              . Together, we can build a brighter future for those in need.
+              .
+            </p>
+
+            <p className="mt-4 sm:mt-6 text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed">
+              By joining our mission, you support initiatives that bring hope
+              and opportunity to those who need it most— from providing quality
+              education to underprivileged children, to organizing health camps
+              in rural areas, and empowering women with the tools to lead
+              independent and dignified lives.
+            </p>
+
+            <p className="mt-4 sm:mt-6 text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed">
+              <span className="text-rose-400 font-medium">
+                Your small step can ignite a larger movement
+              </span>
+              . Every hour volunteered, every resource contributed, and every
+              message shared plays a part in creating a ripple effect of change.
+              Together, we can build a brighter, more equitable future—one act
+              of kindness at a time.
             </p>
           </div>
         </div>

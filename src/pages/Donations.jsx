@@ -25,7 +25,7 @@ export default function Donations() {
     <div className="bg-gray-900 text-white">
       <section className="min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6 py-16 sm:py-24">
         <h2 className="text-3xl md:text-4xl font-extrabold lg:text-5xl mb-3 text-rose-400 drop-shadow-lg">
-          Support the Cause
+          Support the Cause❤️‍🔥
         </h2>
         <p className="text-gray-300 mb-6 sm:mb-8 max-w-2xl px-4">
           Your generosity helps us create lasting change for those who need it

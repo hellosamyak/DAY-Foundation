@@ -5,6 +5,7 @@ export default function Navigation() {
   const links = [
     { text: "Home", path: "/" },
     { text: "About Us", path: "/about" },
+    { text: "Our team", path: "/team" },
     { text: "Our Work", path: "/work" },
     { text: "Get Involved", path: "/getinvolved" },
     { text: "Contact Us", path: "/contact" },
@@ -17,7 +18,7 @@ export default function Navigation() {
           key={link.text}
           to={link.path}
           className={({ isActive }) =>
-            `relative group px-3 py-2 text-lg font-medium ${
+            `relative group px-3 py-2 text-xl font-medium ${
               isActive ? "text-rose-400" : "text-white"
             }`
           }

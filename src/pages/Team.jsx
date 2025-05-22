@@ -164,7 +164,7 @@ function Team() {
           Team Members
         </h3>
 
-        <div className="flex gap-4 justify-center mb-10">
+        <div className="flex flex-wrap sm:flex-nowrap justify-center gap-2 sm:gap-4 mb-10 overflow-x-auto px-2">
           {[
             "Central Management",
             "Jabalpur Management",
@@ -173,7 +173,7 @@ function Team() {
             <button
               key={city}
               onClick={() => setSelectedCity(city)}
-              className={`px-5 text-lg py-2 rounded font-semibold border-2 ${
+              className={`whitespace-nowrap px-3 sm:px-5 py-2 text-sm sm:text-lg rounded font-semibold border-2 ${
                 selectedCity === city
                   ? "bg-rose-500 border-rose-500 text-white"
                   : "border-gray-500 text-gray-300 hover:border-rose-400 hover:text-white"

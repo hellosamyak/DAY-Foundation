@@ -10,7 +10,6 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
 
-  // Close mobile menu when route changes
   useEffect(() => {
     setIsOpen(false);
   }, [location.pathname]);
@@ -64,7 +63,7 @@ export default function Navbar() {
             <img
               src="/Logo.jpeg"
               alt="Logo"
-              className="h-12 w-12 backdrop-blur-sm rounded-full"
+              className="h-12 w-12 backdrop-blur-sm rounded-full ml-4"
             />
             <div className="flex space-x-1">
               <span className="text-rose-500 font-extrabold text-2xl">DAY</span>

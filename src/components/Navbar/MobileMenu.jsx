@@ -15,14 +15,14 @@ export default function MobileMenu({ isOpen, onClose }) {
 
   return (
     <div className="md:hidden absolute top-20 left-0 right-0 bg-gray-900/95 backdrop-blur-sm z-50 w-full">
-      <div className="px-4 pt-4 pb-6 space-y-2">
+      <div className="px-4 sm:px-6 lg:px-8 pt-4 pb-6 space-y-2">
         {links.map((link) => (
           <NavLink
             key={link.text}
             to={link.path}
             onClick={onClose}
             className={({ isActive }) =>
-              `block px-3 py-3 text-lg font-medium ${
+              `block px-3 py-3 text-lg font-medium ml-4 ${
                 isActive ? "text-rose-400" : "text-white hover:text-rose-200"
               }`
             }
@@ -30,7 +30,7 @@ export default function MobileMenu({ isOpen, onClose }) {
             {link.text}
           </NavLink>
         ))}
-        <div className="pt-2">
+        <div className="pt-2 ml-4">
           <Link to="/donations" onClick={onClose}>
             <button className="w-full bg-rose-500 text-white px-4 py-3 rounded text-lg font-medium hover:bg-rose-600 transition-all duration-300 ease-in-out">
               Donate

@@ -1,7 +1,7 @@
 import React from "react";
 import { BookOpen, HeartHandshake, Users, HelpingHand } from "lucide-react";
 
-export default function Goal() {
+export default function Goals() {
   const goals = [
     {
       icon: BookOpen,
@@ -31,7 +31,7 @@ export default function Goal() {
 
   return (
     <div
-      id="goal"
+      id="goals"
       className="bg-gray-800 min-h-screen flex flex-col justify-center items-center py-12 sm:py-16 lg:py-24"
     >
       <div className="w-full max-w-7xl px-2 sm:px-4 lg:px-8 text-center">
@@ -47,7 +47,7 @@ export default function Goal() {
           {goals.map((goal, index) => (
             <div
               key={index}
-              className="bg-gray-900 rounded-lg p-6 sm:p-8 text-center"
+              className="bg-gray-900 rounded-lg p-6 sm:p-8 text-center transition-transform hover:scale-105"
             >
               <goal.icon className="mx-auto h-10 w-10 sm:h-12 sm:w-12 text-rose-400" />
               <p className="mt-3 sm:mt-4 text-xl sm:text-2xl font-bold text-white">

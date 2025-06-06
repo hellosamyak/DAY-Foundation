@@ -1,97 +1,29 @@
-import { React, useState } from "react";
-import TeamMemberCard from "../components/TeamMemberCard";
+import React from "react";
+import MembersCarousel from "../components/MembersCarousel";
+import { CentralMembers } from "../components/data/TeamMembers";
 
-const indoreMembers = [
-  {
-    id: 1,
-    name: "Priyanshi Dubey",
-    role: "HR Head",
-    city: "Indore Management",
-    image: "/images/team/priyanshi.jpeg",
-  },
-  {
-    id: 2,
-    name: "Edwin Kujur",
-    role: "Asst. HR",
-    city: "Indore Management",
-    image: "/images/team/edwin.jpeg",
-  },
-  {
-    id: 3,
-    name: "Khushi Kapoor",
-    role: "Healthcare Manager",
-    city: "Indore Management",
-    image: "/images/team/khushi.jpeg",
-  },
-  {
-    id: 4,
-    name: "Dhruv Mukati",
-    role: "Logistics Head",
-    city: "Indore Management",
-    image: "/images/team/dhruv.jpeg",
-  },
-  {
-    id: 5,
-    name: "Abhijeet Singh Sengar",
-    role: "Asst. Logistics Head",
-    city: "Indore Management",
-    image: "/images/team/abhijeet.jpeg",
-  },
-  {
-    id: 6,
-    name: "Khushi Chanodiya",
-    role: "Management Coordinator",
-    city: "Indore Management",
-    image: "/images/team/khushic.jpeg",
-  },
-  {
-    id: 7,
-    name: "Zainab Sheikh",
-    role: "Creative Head",
-    city: "Indore Management",
-    image: "/images/team/zainab.jpeg",
-  },
-  {
-    id: 8,
-    name: "Meenakshi Kumari Mishra",
-    role: "Education & Curriculum Manager",
-    city: "Indore Management",
-    image: "/images/team/meenakshi.jpeg",
-  },
-  {
-    id: 9,
-    name: "Saurabh Pandey",
-    role: "Education & Curriculum Manager",
-    city: "Indore Management",
-    image: "/images/team/saurabh.jpeg",
-  },
-  {
-    id: 10,
-    name: "Neha Singh",
-    role: "Legal Manager",
-    city: "Indore Management",
-    image: "/images/team/neha.jpeg",
-  },
-];
-const jabalpurMembers = [];
-const centralMembers = [
-  {
-    id: 1,
-    name: "Khushali Tak",
-    role: "Hiring Executive",
-    city: "Central Management",
-    image: "/images/team/khushali.jpeg",
-  },
-];
+class ErrorBoundary extends React.Component {
+  state = { hasError: false };
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="bg-gray-800 min-h-screen flex items-center justify-center">
+          <h1 className="text-white text-xl">
+            Something went wrong with the carousel.
+          </h1>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
 
 function Team() {
-  const [selectedCity, setSelectedCity] = useState("Central Management");
-  let displayedMembers = [];
-  if (selectedCity === "Indore Management") displayedMembers = indoreMembers;
-  else if (selectedCity === "Jabalpur Management")
-    displayedMembers = jabalpurMembers;
-  else if (selectedCity === "Central Management")
-    displayedMembers = centralMembers;
   return (
     <div className="bg-gray-900 text-white">
       <section className="min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6 py-16 sm:py-24">
@@ -116,11 +48,9 @@ function Team() {
             </p>
 
             <p className="mt-4 sm:mt-6 text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed">
-              From field volunteers working on the ground to regional
-              coordinators managing programs, and from youth leaders organizing
-              awareness drives to core team members designing impactful
-              strategies—each person plays a crucial role in moving our mission
-              forward.
+              From field volunteers to regional coordinators and youth leaders
+              to core team members, everyone plays a vital role in advancing our
+              mission.
             </p>
 
             <p className="mt-4 sm:mt-6 text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed">
@@ -159,39 +89,14 @@ function Team() {
           </div>
         </div>
       </section>
-      <section className="bg-gray-800 min-h-[40vh] flex flex-col justify-center items-center text-center px-4 sm:px-6 py-16 sm:py-24">
-        <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8">
-          Team Members
-        </h3>
 
-        <div className="flex flex-wrap sm:flex-nowrap justify-center gap-2 sm:gap-4 mb-10 overflow-x-auto px-2">
-          {[
-            "Central Management",
-            "Jabalpur Management",
-            "Indore Management",
-          ].map((city) => (
-            <button
-              key={city}
-              onClick={() => setSelectedCity(city)}
-              className={`whitespace-nowrap px-3 sm:px-5 py-2 text-sm sm:text-lg rounded font-semibold border-2 ${
-                selectedCity === city
-                  ? "bg-rose-500 border-rose-500 text-white"
-                  : "border-gray-500 text-gray-300 hover:border-rose-400 hover:text-white"
-              } transition-colors duration-200`}
-            >
-              {city}
-            </button>
-          ))}
-        </div>
-
-        <div className="w-full max-w-6xl px-4 sm:px-6 lg:px-12">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {displayedMembers.map((member) => (
-              <TeamMemberCard key={member.id} {...member} />
-            ))}
-          </div>
-        </div>
-      </section>
+      <ErrorBoundary>
+        <MembersCarousel
+          slides={CentralMembers}
+          autoSlide={true}
+          autoSlideInterval={4000}
+        />
+      </ErrorBoundary>
     </div>
   );
 }

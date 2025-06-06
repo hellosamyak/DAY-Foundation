@@ -28,7 +28,7 @@ export default function Impact() {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="bg-gray-800 rounded-lg p-6 sm:p-8 text-center"
+              className="bg-gray-800 rounded-lg p-6 sm:p-8 text-center transition-transform hover:scale-105"
             >
               <stat.icon className="mx-auto h-10 w-10 sm:h-12 sm:w-12 text-rose-400" />
               <p className="mt-3 sm:mt-4 text-2xl sm:text-4xl font-bold text-white">

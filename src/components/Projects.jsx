@@ -37,7 +37,10 @@ export default function Projects() {
 
         <div className="mt-8 sm:mt-12 lg:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="bg-gray-800 rounded-lg overflow-hidden">
+            <div
+              key={index}
+              className="bg-gray-800 rounded-lg overflow-hidden transition-transform hover:scale-105"
+            >
               <img
                 src={project.image}
                 alt={project.title}

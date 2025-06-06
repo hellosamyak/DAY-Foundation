@@ -14,19 +14,19 @@ export default function Footer() {
               alt="Logo"
               className="h-10 w-10 sm:h-12 sm:w-12 backdrop-blur-sm rounded-full mb-3 sm:mb-4 ml-5"
             />
-            <p className="text-xs sm:text-sm leading-relaxed ml-4">
+            <p className="text-xs sm:text-sm leading-relaxed ml-4 mr-4">
               Empowering underprivileged communities through education, aid,
               youth, and care.
             </p>
           </div>
 
-          <div className="ml-4">
+          <div className="ml-4 mr-4">
             <ContactInfo />
           </div>
-          <div className="ml-4">
+          <div className="ml-4 mr-4">
             <QuickLinks />
           </div>
-          <div className="ml-4">
+          <div className="ml-4 mr-4">
             <SocialLinks />
           </div>
         </div>

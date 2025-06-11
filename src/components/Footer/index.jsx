@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           <div className="flex flex-col items-start">
             <img
-              src="/Logo.jpeg"
+              src="/Logo.png"
               alt="Logo"
               className="h-12 w-12 rounded-full mb-4"
             />

@@ -65,7 +65,7 @@ export default function Navbar() {
             className="flex items-center space-x-4 cursor-pointer"
           >
             <img
-              src="/Logo.jpeg"
+              src="/Logo.png"
               alt="DAY Foundation Logo"
               className="h-12 w-12 rounded-full object-cover"
             />

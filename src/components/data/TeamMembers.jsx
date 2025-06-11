@@ -4,7 +4,7 @@ const generateTeamMembers = (members, team) => {
   return members.map((member, index) => {
     const fullName = member.name.toLowerCase().replace(/\s+/g, "");
     const imageUrl = `/images/team/${team}/${fullName}.png`;
-    const fallbackImage = `https://media.istockphoto.com/id/2149054573/photo/glowing-neon-person-sign-outline-round-avatar-pictogram-in-vivid-color-neon-icon-of-user-in.webp?a=1&b=1&s=612x612&w=0&k=20&c=809YnGFnuM80t9yzMwhZPJI3ji8gTAuUiU0Z7_jskxo=`;
+    const fallbackImage = `https://plus.unsplash.com/premium_photo-1683584405772-ae58712b4172?q=80&w=1984&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`;
 
     return {
       ...member,
@@ -42,7 +42,7 @@ const jabalpurBaseMembers = [
   { name: "Vinayak Khandelwal", role: "Operations & Management Coordinator" },
   {
     name: "Akanksha Chourasiya",
-    role: "City Public Relations (PR) Coordinator – Jabalpur",
+    role: "City Public Relations (PR) Coordinator",
   },
 ];
 
@@ -61,7 +61,7 @@ const indoreBaseMembers = [
   { name: "Abhijeet Singh Sengar", role: "Assistant Logistics Coordinator" },
   {
     name: "Hriday Bhugra",
-    role: "City Public Relations (PR) Coordinator – Indore",
+    role: "City Public Relations (PR) Coordinator",
   },
 ];
 

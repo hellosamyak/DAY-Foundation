@@ -148,6 +148,10 @@ export default function MembersCarousel({
                       <img
                         src={slide.image}
                         alt={slide.name}
+                        onError={(e) => {
+                          e.target.src = slide.fallbackImage;
+                          e.target.onerror = null;
+                        }}
                         className="mx-auto h-48 sm:h-64 lg:h-72 w-full object-cover rounded-xl shadow-lg"
                       />
                     </div>

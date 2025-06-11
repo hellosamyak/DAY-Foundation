@@ -69,18 +69,19 @@ export default function SocialLinks() {
         <p className="text-xs sm:text-sm font-semibold leading-relaxed text-gray-300 mb-3 sm:mb-4">
           Subscribe to our newsletter for updates.
         </p>
-        <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-0">
+
+        <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2">
           <input
             type="email"
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm rounded-l-md sm:rounded-r-none bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:outline-none w-full sm:w-auto"
+            className="flex-1 min-w-0 px-3 py-2 text-xs sm:text-sm rounded-md bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:outline-none"
             aria-label="Email address"
           />
           <button
             onClick={handleSubscribe}
-            className="px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm bg-rose-500 border border-rose-500 text-white font-medium rounded-r-md sm:rounded-l-none hover:bg-rose-600 transition-all duration-300 ease-in-out w-full sm:w-auto"
+            className="px-4 py-2 text-xs sm:text-sm bg-rose-500 border border-rose-500 text-white font-medium rounded-md hover:bg-rose-600 transition-all duration-300 ease-in-out w-full sm:w-auto"
           >
             Subscribe
           </button>

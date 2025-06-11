@@ -26,14 +26,18 @@ export default function Navbar() {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = isOpen ? "hidden" : "auto";
+    if (isOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
     return () => {
-      document.body.style.overflow = "auto";
+      document.body.classList.remove("overflow-hidden");
     };
   }, [isOpen]);
 
@@ -62,10 +66,10 @@ export default function Navbar() {
           >
             <img
               src="/Logo.jpeg"
-              alt="Logo"
-              className="h-12 w-12 backdrop-blur-sm rounded-full ml-4"
+              alt="DAY Foundation Logo"
+              className="h-12 w-12 rounded-full object-cover"
             />
-            <div className="flex space-x-1">
+            <div className="hidden sm:flex space-x-1">
               <span className="text-rose-500 font-extrabold text-2xl">DAY</span>
               <span className="text-white font-normal text-2xl">
                 Foundation
@@ -73,14 +77,16 @@ export default function Navbar() {
             </div>
           </Link>
 
-          <div className="hidden md:block">
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center">
             <Navigation />
           </div>
 
-          <div className="md:hidden">
+          {/* Hamburger Menu Icon */}
+          <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              aria-label={isOpen ? "Close menu" : "Open menu"}
+              aria-label="Toggle menu"
               className="text-white"
             >
               {isOpen ? (
@@ -93,6 +99,7 @@ export default function Navbar() {
         </div>
       </div>
 
+      {/* Mobile Menu */}
       <MobileMenu isOpen={isOpen} onClose={handleCloseMenu} />
     </nav>
   );

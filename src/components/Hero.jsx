@@ -5,19 +5,16 @@ import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 function Hero() {
   return (
     <div id="home" className="relative min-h-screen">
-      {/* Background Image */}
       <div className="absolute inset-0">
         <Link to="/">
           <img
             src="/Hero.jpeg"
             alt="Hero image"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover max-w-full"
           />
         </Link>
         <div className="absolute inset-0 bg-gray-900/70 mix-blend-multiply" />
       </div>
-
-      {/* Hero Content */}
       <div className="relative flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl">
           <h1 className="text-3xl sm:text-4xl lg:text-6xl font-extrabold tracking-tight text-white">
@@ -26,8 +23,6 @@ function Hero() {
           <h1 className="text-3xl sm:text-4xl lg:text-6xl font-extrabold tracking-tight text-rose-500">
             and Youth
           </h1>
-
-          {/* Taglines */}
           <div className="mt-4 sm:mt-6">
             <p className="text-lg sm:text-2xl text-gray-300">
               "शिक्षा से सशक्तिकरण, युवा से समर्थन"
@@ -36,8 +31,6 @@ function Hero() {
               Empowerment through Education, Support through Youth.
             </p>
           </div>
-
-          {/* Buttons */}
           <div className="mt-6 flex justify-center">
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link to="/donations">

@@ -13,7 +13,7 @@ import Team from "./pages/Team";
 
 export default function App() {
   return (
-    <div className="bg-gray-900 flex flex-col min-h-screen">
+    <div className="bg-gray-900 flex flex-col min-h-screen overflow-x-hidden">
       <Navbar />
       <main className="flex-grow">
         {" "}

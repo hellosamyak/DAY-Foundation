@@ -1,34 +1,40 @@
 import React from "react";
 
-const addImage = (arr) =>
-  arr.map((member) => ({
-    ...member,
-    image: `https://plus.unsplash.com/premium_photo-1683584405772-ae58712b4172?q=80&w=1984&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D,${
-      member.name.split(" ")[0]
-    }`,
-  }));
+const generateTeamMembers = (members, team) => {
+  return members.map((member, index) => {
+    const fullName = member.name.toLowerCase().replace(/\s+/g, "");
+    const imageUrl = `/images/team/${team}/${fullName}.png`;
+    const fallbackImage = `https://media.istockphoto.com/id/2149054573/photo/glowing-neon-person-sign-outline-round-avatar-pictogram-in-vivid-color-neon-icon-of-user-in.webp?a=1&b=1&s=612x612&w=0&k=20&c=809YnGFnuM80t9yzMwhZPJI3ji8gTAuUiU0Z7_jskxo=`;
 
-export const JabalpurMembers = addImage([
+    return {
+      ...member,
+      image: imageUrl,
+      fallbackImage,
+    };
+  });
+};
+
+const jabalpurBaseMembers = [
   { name: "Aditi Tiwari", role: "Head of Programs & Development" },
   { name: "Niharika Vasvani", role: "Head of Human Resources (HR)" },
   { name: "Khushi Tandan", role: "Head of Legal & Advocacy" },
   { name: "Moulshree Sahu", role: "Creative Director" },
   { name: "Shaurya Nanda", role: "Public Relations (PR) Manager" },
   { name: "Yash Jhureley", role: "Logistics Manager" },
-  { name: "Aadya Mishra", role: "Program Lead – Social & Mental Health (SMH)" },
+  { name: "Aadya Mishra", role: "Program Lead – Social Media Handle (SMH)" },
   {
     name: "Shikhar Pandey",
-    role: "Program Manager – Social & Mental Health (SMH)",
+    role: "Program Manager – Social Media Handle (SMH)",
   },
   { name: "Ishika Singh Verma", role: "Education & Curriculum Manager" },
   { name: "Ananya Jayan", role: "Education & Curriculum Manager" },
   {
     name: "Harsh Vishwakarma",
-    role: "Assistant Program Coordinator – Social & Mental Health (SMH)",
+    role: "Assistant Program Coordinator – Social Media Handle (SMH)",
   },
   {
     name: "Astha Sahu",
-    role: "Assistant Program Coordinator – Social & Mental Health (SMH)",
+    role: "Assistant Program Coordinator – Social Media Handle (SMH)",
   },
   { name: "Nayanika Gupta", role: "Assistant Creative Lead" },
   { name: "Harsh Soni", role: "Assistant Logistics Coordinator" },
@@ -38,9 +44,9 @@ export const JabalpurMembers = addImage([
     name: "Akanksha Chourasiya",
     role: "City Public Relations (PR) Coordinator – Jabalpur",
   },
-]);
+];
 
-export const IndoreMembers = addImage([
+const indoreBaseMembers = [
   { name: "Khushi Chanodiya", role: "City Management Coordinator – Indore" },
   { name: "Priyanshi Dubey", role: "Head of Human Resources (HR)" },
   { name: "Zenab Sheikh", role: "Creative Director" },
@@ -57,27 +63,31 @@ export const IndoreMembers = addImage([
     name: "Hriday Bhugra",
     role: "City Public Relations (PR) Coordinator – Indore",
   },
-]);
+];
 
-export const CentralMembers = addImage([
+const centralBaseMembers = [
   { name: "Om Sen", role: "Founder & Executive Director" },
   {
     name: "Radhika Umre",
-    role: "Director of Social & Mental Health (SMH) and Marketing",
+    role: "Director of Social Media Handle (SMH) and Marketing",
   },
   { name: "Aditi Tiwari", role: "Director of Programs & Development" },
+  { name: "Moulshree Sahu", role: "Jabalpur City Representative" },
+  { name: "Nikita Patel", role: "Indore City Representative" },
   { name: "Vaibhav Sharma", role: "Director of Finance" },
   { name: "Niharika Vasvani", role: "Head of Human Resources (HR)" },
   { name: "Khushi Tandan", role: "Head of Legal & Advocacy" },
   { name: "Gunika Upadhyay", role: "Outreach Manager" },
   { name: "Vinayak Khandelwal", role: "Operations & Management Coordinator" },
-  { name: "Nikita Patel", role: "Indore City Representative" },
-  { name: "Moulshree Sahu", role: "Jabalpur City Representative" },
   { name: "Khushali Tak", role: "Hiring Executive" },
-]);
+];
 
-function TeamMembers() {
-  return <div>TeamMembers</div>;
-}
-
-export default TeamMembers;
+export const JabalpurMembers = generateTeamMembers(
+  jabalpurBaseMembers,
+  "jabalpur"
+);
+export const IndoreMembers = generateTeamMembers(indoreBaseMembers, "indore");
+export const CentralMembers = generateTeamMembers(
+  centralBaseMembers,
+  "central"
+);

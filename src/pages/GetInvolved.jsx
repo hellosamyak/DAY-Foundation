@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Users, Briefcase } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const GetInvolved = () => {
   return (
@@ -55,43 +55,78 @@ const GetInvolved = () => {
           Explore ways to contribute, grow, and create meaningful change.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-10 max-w-5xl px-2 sm:px-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm: select-none max-w-5xl px-2 sm:px-0">
           <div className="bg-gray-900 rounded-xl sm:rounded-2xl shadow-lg p-6 sm:p-10 text-center transition-transform transform hover:scale-105">
             <Users className="mx-auto h-10 w-10 sm:h-14 sm:w-14 text-rose-400" />
             <h3 className="mt-4 sm:mt-6 text-xl sm:text-2xl font-bold text-white">
               Volunteer with Us
             </h3>
-            <p className="mt-3 sm:mt-4 text-base sm:text-lg text-gray-400 leading-relaxed">
-              📌 Work hands-on in education programs, healthcare initiatives,
-              and community welfare activities.
-              <br />
-              📌 Gain practical experience while positively impacting lives.
-              <br />
-              📌 Open to students, professionals, and social enthusiasts who
-              want to bring change.
-            </p>
+            <ul className="mt-4 sm:mt-6 space-y-2 text-base sm:text-lg text-gray-400 leading-relaxed text-left sm:text-center list-disc list-inside">
+              <li>
+                Work hands-on in education programs, healthcare initiatives, and
+                community welfare activities.
+              </li>
+              <li>
+                Gain practical experience while positively impacting lives.
+              </li>
+              <li>
+                Open to students, professionals, and social enthusiasts who want
+                to bring change.
+              </li>
+            </ul>
+            <div className="mt-6 sm:mt-8">
+              <div className="mt-6 sm:mt-8">
+                <a
+                  href="https://forms.gle/yCkah58QrvmJ8U1P6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block"
+                >
+                  <button className="bg-rose-500 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-md text-base sm:text-lg font-medium hover:bg-rose-600 transition-colors duration-200 flex items-center justify-center gap-2 mx-auto">
+                    Become a Volunteer
+                  </button>
+                </a>
+              </div>
+            </div>
           </div>
+
           <div className="bg-gray-900 rounded-xl sm:rounded-2xl shadow-lg p-6 sm:p-10 text-center transition-transform transform hover:scale-105">
             <Briefcase className="mx-auto h-10 w-10 sm:h-14 sm:w-14 text-rose-400" />
             <h3 className="mt-4 sm:mt-6 text-xl sm:text-2xl font-bold text-white">
               Internship Opportunities
             </h3>
-            <p className="mt-3 sm:mt-4 text-base sm:text-lg text-gray-400 leading-relaxed">
-              📌 Engage in meaningful social work while developing professional
-              skills.
-              <br />
-              📌 Work in areas like education, public relations, event
-              management, and community outreach.
-              <br />
-              📌 A great way for students and young professionals to enhance
-              their resumes while giving back to society.
-            </p>
+            <ul className="mt-4 sm:mt-6 space-y-2 text-base sm:text-lg text-gray-400 leading-relaxed text-left sm:text-center list-disc list-inside">
+              <li>
+                Engage in meaningful social work while developing professional
+                skills.
+              </li>
+              <li>
+                Work in areas like education, public relations, event three
+                management, and community outreach.
+              </li>
+              <li>
+                A great way for students and young professionals to enhance
+                their resumes while giving back to society.
+              </li>
+            </ul>
+            <div className="mt-6 sm:mt-8">
+              <a
+                href="https://forms.gle/HnyzGBh2zdFdBxiu9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block"
+              >
+                <button className="bg-rose-500 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-md text-base sm:text-lg font-medium hover:bg-rose-600 transition-colors duration-200 flex items-center justify-center gap-2 mx-auto">
+                  Apply for Internship
+                </button>
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="my-4 sm:my-6 flex flex-col justify-center items-center text-center px-4 sm:px-6 py-16 sm:py-20">
-        <div className="max-w-4xl w-full bg-gradient-to-br from-gray-800 to-gray-700 rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl p-6 sm:p-10 md:p-14 transition-transform transform hover:scale-105">
+        <div className="max-w-4xl w-full bg-gradient-to-br from-gray-800 to-gray-700 rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl p-6 sm:p-10 md:p-14 transition-transform transform select-none">
           <h3 className="text-2xl sm:text-3xl font-bold text-white">
             Donate & Support Our Cause
           </h3>

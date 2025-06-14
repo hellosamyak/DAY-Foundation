@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import ImportantNotice from "../ImportantNotice";
 import MenuIcon from "@mui/icons-material/Menu";
 import ClearIcon from "@mui/icons-material/Clear";
 import Navigation from "./Navigation";
@@ -46,61 +47,67 @@ export default function Navbar() {
   };
 
   return (
-    <nav
-      className={`fixed w-full z-50 transition-colors duration-300 ${
-        isScrolled ? "bg-gray-900/95 backdrop-blur-sm" : "bg-transparent"
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          <Link
-            to="/"
-            onClick={(e) => {
-              if (location.pathname === "/") {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: "smooth" });
-              }
-              handleCloseMenu();
-            }}
-            className="flex items-center space-x-4 cursor-pointer"
-          >
-            <img
-              src="/Logo.png"
-              alt="DAY Foundation Logo"
-              className="h-12 w-12 rounded-full object-cover"
-            />
-            <div className="hidden sm:flex space-x-1">
-              <span className="text-rose-500 font-extrabold text-2xl">DAY</span>
-              <span className="text-white font-normal text-2xl">
-                Foundation
-              </span>
-            </div>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center">
-            <Navigation />
-          </div>
-
-          {/* Hamburger Menu Icon */}
-          <div className="lg:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              aria-label="Toggle menu"
-              className="text-white"
+    <>
+      <nav
+        className={`fixed w-full z-50 transition-colors duration-300 ${
+          isScrolled ? "bg-gray-900/95 backdrop-blur-sm" : "bg-transparent"
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-20">
+            <Link
+              to="/"
+              onClick={(e) => {
+                if (location.pathname === "/") {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }
+                handleCloseMenu();
+              }}
+              className="flex items-center space-x-4 cursor-pointer"
             >
-              {isOpen ? (
-                <ClearIcon className="h-6 w-6" />
-              ) : (
-                <MenuIcon className="h-6 w-6" />
-              )}
-            </button>
+              <img
+                src="/Logo.png"
+                alt="DAY Foundation Logo"
+                className="h-12 w-12 rounded-full object-cover"
+              />
+              <div className="hidden sm:flex space-x-1">
+                <span className="text-rose-500 font-extrabold text-2xl">
+                  DAY
+                </span>
+                <span className="text-white font-normal text-2xl">
+                  Foundation
+                </span>
+              </div>
+            </Link>
+
+            {/* Desktop Navigation */}
+            <div className="hidden lg:flex items-center">
+              <Navigation />
+            </div>
+
+            {/* Hamburger Menu Icon */}
+            <div className="lg:hidden">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                aria-label="Toggle menu"
+                className="text-white"
+              >
+                {isOpen ? (
+                  <ClearIcon className="h-6 w-6" />
+                ) : (
+                  <MenuIcon className="h-6 w-6" />
+                )}
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+        {/* Show ImportantNotice only on the homepage */}
+        {location.pathname === "/" && <ImportantNotice />}
 
-      {/* Mobile Menu */}
-      <MobileMenu isOpen={isOpen} onClose={handleCloseMenu} />
-    </nav>
+        {/* Mobile Menu */}
+        <MobileMenu isOpen={isOpen} onClose={handleCloseMenu} />
+      </nav>
+    </>
   );
 }

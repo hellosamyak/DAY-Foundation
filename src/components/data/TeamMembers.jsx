@@ -15,71 +15,48 @@ const generateTeamMembers = (members, team) => {
 };
 
 const jabalpurBaseMembers = [
-  { name: "Aditi Tiwari", role: "Head of Programs & Development" },
-  { name: "Niharika Vasvani", role: "Head of Human Resources (HR)" },
-  { name: "Khushi Tandan", role: "Head of Legal & Advocacy" },
-  { name: "Moulshree Sahu", role: "Creative Director" },
-  { name: "Shaurya Nanda", role: "Public Relations (PR) Manager" },
-  { name: "Yash Jhureley", role: "Logistics Manager" },
-  { name: "Aadya Mishra", role: "Program Lead – Social Media Handle (SMH)" },
-  {
-    name: "Shikhar Pandey",
-    role: "Program Manager – Social Media Handle (SMH)",
-  },
-  { name: "Ishika Singh Verma", role: "Education & Curriculum Manager" },
+  { name: "Vinayak Khandelwal", role: "Management Coordinator" },
+  { name: "Moulshree Sahu", role: "Creative Head" },
+  { name: "Nayanika Gupta", role: "Assistant Creative Head" },
+  { name: "Yash Jhureley", role: "Head of Logistics" },
+  { name: "Harsh Soni", role: "Assistant Head of Logistics" },
   { name: "Ananya Jayan", role: "Education & Curriculum Manager" },
-  {
-    name: "Harsh Vishwakarma",
-    role: "Assistant Program Coordinator – Social Media Handle (SMH)",
-  },
-  {
-    name: "Astha Sahu",
-    role: "Assistant Program Coordinator – Social Media Handle (SMH)",
-  },
-  { name: "Nayanika Gupta", role: "Assistant Creative Lead" },
-  { name: "Harsh Soni", role: "Assistant Logistics Coordinator" },
-  { name: "Amit Kanojia", role: "Assistant Human Resources (HR) Manager" },
-  { name: "Vinayak Khandelwal", role: "Operations & Management Coordinator" },
-  {
-    name: "Akanksha Chourasiya",
-    role: "City Public Relations (PR) Coordinator",
-  },
+  { name: "Ishika Singh Verma", role: "Education & Curriculum Manager" },
+  { name: "Amit Kanojiya", role: "Head of Human Resources (HR)" },
 ];
 
 const indoreBaseMembers = [
-  { name: "Khushi Chanodiya", role: "City Management Coordinator – Indore" },
-  { name: "Priyanshi Dubey", role: "Head of Human Resources (HR)" },
-  { name: "Zenab Sheikh", role: "Creative Director" },
-  { name: "Dhruv Mukati", role: "Logistics Manager" },
-  { name: "Neha Singh", role: "Legal Affairs Manager" },
-  { name: "Khushi Kapoor", role: "Healthcare Program Manager" },
-  { name: "Meenakshi", role: "Education & Curriculum Manager" },
-  { name: "Saurabh Pandey", role: "Education & Curriculum Manager" },
+  { name: "Khushi Chanodiya", role: "Management Coordinator" },
   { name: "Nikita Patel", role: "Education & Curriculum Manager" },
-  { name: "Edwin Kujur", role: "Assistant Human Resources (HR) Manager" },
-  { name: "Urvi", role: "Assistant Creative Lead" },
-  { name: "Abhijeet Singh Sengar", role: "Assistant Logistics Coordinator" },
-  {
-    name: "Hriday Bhugra",
-    role: "City Public Relations (PR) Coordinator",
-  },
+  { name: "Saurabh Pandey", role: "Education & Curriculum Manager" },
+  { name: "Zenab Sheikh", role: "Creative Head" },
+  { name: "Urvi", role: "Assistant Creative Head" },
+  { name: "Edwin Kujur", role: "Head of Human Resources (HR)" },
+  { name: "Priyanshi Dubey", role: "Assistant Human Resources (HR) Head" },
+  { name: "Dhruv Mukati", role: "Head of Logistics" },
+  { name: "Abhijeet Singh Sengar", role: "Assistant Head of Logistics" },
+  { name: "Neha Singh", role: "Legal Manager" },
+  { name: "Khushi Kapoor", role: "Health Care Manager" },
 ];
 
 const centralBaseMembers = [
   { name: "Om Sen", role: "Founder & Executive Director" },
-  {
-    name: "Radhika Umre",
-    role: "Director of Social Media Handle (SMH) and Marketing",
-  },
-  { name: "Aditi Tiwari", role: "Director of Programs & Development" },
-  { name: "Moulshree Sahu", role: "Jabalpur City Representative" },
-  { name: "Nikita Patel", role: "Indore City Representative" },
-  { name: "Vaibhav Sharma", role: "Director of Finance" },
   { name: "Niharika Vasvani", role: "Head of Human Resources (HR)" },
-  { name: "Khushi Tandan", role: "Head of Legal & Advocacy" },
-  { name: "Gunika Upadhyay", role: "Outreach Manager" },
-  { name: "Vinayak Khandelwal", role: "Operations & Management Coordinator" },
+  { name: "Aditi Tiwari", role: "Head of Programs & Development" },
+  { name: "Radhika Umre", role: "Head of Social Media & Marketing" },
+  { name: "Khushi Tandan", role: "Legal & Communication Head" },
+  { name: "Vaibhav Sharma", role: "Head of Finance" },
   { name: "Khushali Tak", role: "Hiring Executive" },
+  { name: "Gunika Upadhyay", role: "Outreach Manager" },
+];
+
+const socialMediaTeam = [
+  { name: "Aadya Mishra", role: "Head of Social Media" },
+  { name: "Archie Yadav", role: "Assistant Head of Social Media" },
+  { name: "Harsh Vishwakarma", role: "Assistant Head of Social Media" },
+  { name: "Shaurya Nanda", role: "Head of Public Relations (PR)" },
+  { name: "Saniya Naaz", role: "Assistant Head of Public Relations (PR)" },
+  { name: "Ayushman Rathore", role: "Assistant Head of Public Relations (PR)" },
 ];
 
 export const JabalpurMembers = generateTeamMembers(
@@ -90,4 +67,8 @@ export const IndoreMembers = generateTeamMembers(indoreBaseMembers, "indore");
 export const CentralMembers = generateTeamMembers(
   centralBaseMembers,
   "central"
+);
+export const SMTeamMembers = generateTeamMembers(
+  socialMediaTeam,
+  "socialMedia"
 );

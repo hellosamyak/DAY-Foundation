@@ -4,6 +4,7 @@ import {
   CentralMembers,
   JabalpurMembers,
   IndoreMembers,
+  SMTeamMembers,
 } from "../components/data/TeamMembers";
 
 export default function MembersCarousel({
@@ -11,15 +12,18 @@ export default function MembersCarousel({
   autoSlideInterval = 3000,
 }) {
   const [curr, setCurr] = useState(0);
-  const [selectedCity, setSelectedCity] = useState("Central");
+  const [selectedTeam, setSelectedTeam] = useState("Central");
 
   const getMembers = () => {
-    switch (selectedCity) {
+    switch (selectedTeam) {
       case "Jabalpur":
         return JabalpurMembers;
       case "Indore":
         return IndoreMembers;
       case "Central":
+        return CentralMembers;
+      case "Social Media":
+        return SMTeamMembers;
       default:
         return CentralMembers;
     }
@@ -65,7 +69,7 @@ export default function MembersCarousel({
   useEffect(() => {
     // Reset the carousel position when the city changes
     setCurr(0);
-  }, [selectedCity]);
+  }, [selectedTeam]);
 
   if (!slides || slides.length === 0) {
     return (
@@ -95,9 +99,9 @@ export default function MembersCarousel({
 
         <div className="flex justify-center flex-wrap gap-3 sm:gap-4 mb-8 sm:mb-10 lg:mb-12 px-4">
           <button
-            onClick={() => setSelectedCity("Central")}
+            onClick={() => setSelectedTeam("Central")}
             className={`px-8 py-3 rounded-full text-base font-medium transition-all duration-300 ${
-              selectedCity === "Central"
+              selectedTeam === "Central"
                 ? "bg-rose-500 text-white shadow-lg transform scale-105"
                 : "bg-gray-700 text-gray-300 hover:bg-gray-600 hover:scale-105"
             }`}
@@ -105,9 +109,9 @@ export default function MembersCarousel({
             Central
           </button>
           <button
-            onClick={() => setSelectedCity("Jabalpur")}
+            onClick={() => setSelectedTeam("Jabalpur")}
             className={`px-8 py-3 rounded-full text-base font-medium transition-all duration-300 ${
-              selectedCity === "Jabalpur"
+              selectedTeam === "Jabalpur"
                 ? "bg-rose-500 text-white shadow-lg transform scale-105"
                 : "bg-gray-700 text-gray-300 hover:bg-gray-600 hover:scale-105"
             }`}
@@ -115,14 +119,24 @@ export default function MembersCarousel({
             Jabalpur
           </button>
           <button
-            onClick={() => setSelectedCity("Indore")}
+            onClick={() => setSelectedTeam("Indore")}
             className={`px-8 py-3 rounded-full text-base font-medium transition-all duration-300 ${
-              selectedCity === "Indore"
+              selectedTeam === "Indore"
                 ? "bg-rose-500 text-white shadow-lg transform scale-105"
                 : "bg-gray-700 text-gray-300 hover:bg-gray-600 hover:scale-105"
             }`}
           >
             Indore
+          </button>
+          <button
+            onClick={() => setSelectedTeam("Social Media")}
+            className={`px-8 py-3 rounded-full text-base font-medium transition-all duration-300 ${
+              selectedTeam === "Social Media"
+                ? "bg-rose-500 text-white shadow-lg transform scale-105"
+                : "bg-gray-700 text-gray-300 hover:bg-gray-600 hover:scale-105"
+            }`}
+          >
+            Social Media
           </button>
         </div>
 

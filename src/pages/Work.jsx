@@ -18,6 +18,7 @@ const Work = () => {
         }
       }, 0);
     }
+    console.log(location.hash);
   }, [location]);
 
   return (

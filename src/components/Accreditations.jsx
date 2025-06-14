@@ -24,7 +24,7 @@ export default function Accreditations() {
   return (
     <div
       id="accreditations"
-      className="bg-gray-800 py-12 sm:py-16 md:py-24 min-h-[80vh] sm:min-h-screen"
+      className="bg-gray-800 min-h-screen flex items-center py-12 sm:py-16 md:py-24"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
@@ -51,24 +51,6 @@ export default function Accreditations() {
               </p>
             </div>
           ))}
-        </div>
-
-        <div className="mt-10 sm:mt-12 md:mt-16 bg-gray-900 rounded-lg p-6 sm:p-8">
-          <h3 className="text-xl sm:text-2xl font-semibold text-white text-center">
-            Our Partnerships
-          </h3>
-          <div className="mt-6 sm:mt-8 grid grid-cols-1 xs:grid-cols-2 gap-4 sm:gap-6 md:gap-8 md:grid-cols-4">
-            {[1, 2, 3, 4].map((_, index) => (
-              <div
-                key={index}
-                className="h-16 sm:h-20 bg-gray-800/50 rounded-lg flex items-center justify-center"
-              >
-                <span className="text-gray-400 text-sm sm:text-base">
-                  Partner Logo
-                </span>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </div>

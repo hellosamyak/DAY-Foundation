@@ -32,15 +32,37 @@ function Hero() {
             </p>
           </div>
           <div className="mt-6 flex justify-center">
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+            {/* Desktop buttons */}
+            <div className="hidden sm:flex flex-row gap-4">
               <Link to="/donations">
-                <button className="bg-rose-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-md text-base sm:text-lg font-medium hover:bg-rose-600 flex items-center justify-center gap-2">
+                <button className="bg-rose-500 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-rose-600 flex items-center justify-center gap-2">
                   Support a cause
-                  <ArrowRightAltIcon className="h-4 w-4 sm:h-5 sm:w-5" />
+                  <ArrowRightAltIcon className="h-5 w-5" />
                 </button>
               </Link>
               <Link to="/about">
-                <button className="border-2 border-white text-white px-4 sm:px-6 py-2 sm:py-3 rounded-md text-base sm:text-lg font-medium hover:bg-white/10">
+                <button className="border-2 border-white text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-white/10">
+                  Learn More
+                </button>
+              </Link>
+            </div>
+
+            {/* Mobile buttons */}
+            <div className="flex sm:hidden flex-col gap-2 w-full max-w-xs">
+              <Link to="/donations">
+                <button className="w-full bg-rose-500 text-white px-3 py-1.5 rounded-md text-sm font-medium hover:bg-rose-600 flex items-center justify-center gap-1">
+                  Support a cause
+                  <ArrowRightAltIcon className="h-3 w-3" />
+                </button>
+              </Link>
+              <Link to="/get-involved">
+                <button className="w-full bg-rose-500 text-white px-3 py-1.5 rounded-md text-sm font-medium hover:bg-rose-600 flex items-center justify-center gap-1">
+                  Get Involved
+                  <ArrowRightAltIcon className="h-3 w-3" />
+                </button>
+              </Link>
+              <Link to="/about">
+                <button className="w-full border-2 border-white text-white px-3 py-1.5 rounded-md text-sm font-medium hover:bg-white/10">
                   Learn More
                 </button>
               </Link>

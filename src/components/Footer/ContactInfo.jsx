@@ -5,8 +5,8 @@ export default function ContactInfo() {
   const contacts = [
     {
       icon: Mail,
-      text: "dayfoundation008@gmail.com",
-      href: "mailto:dayfoundation008@gmail.com",
+      text: "info@dayfoundation.in",
+      href: "mailto:info@dayfoundation.in",
     },
     {
       icon: Phone,

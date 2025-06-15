@@ -71,11 +71,16 @@ export default function Navbar() {
                 alt="DAY Foundation Logo"
                 className="h-12 w-12 rounded-full object-cover"
               />
-              <div className="hidden sm:flex space-x-1">
-                <span className="text-rose-500 font-extrabold text-2xl">
+              {/* Hide text on scroll, show on all screen sizes when not scrolled */}
+              <div
+                className={`flex space-x-1 transition-opacity duration-300 ${
+                  isScrolled ? "opacity-0" : "opacity-100"
+                }`}
+              >
+                <span className="text-rose-500 font-extrabold text-xl sm:text-2xl">
                   DAY
                 </span>
-                <span className="text-white font-normal text-2xl">
+                <span className="text-white font-normal text-xl sm:text-2xl">
                   Foundation
                 </span>
               </div>

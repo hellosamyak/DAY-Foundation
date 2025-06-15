@@ -55,7 +55,7 @@ function Hero() {
                   <ArrowRightAltIcon className="h-3 w-3" />
                 </button>
               </Link>
-              <Link to="/get-involved">
+              <Link to="/getinvolved">
                 <button className="w-full bg-rose-500 text-white px-3 py-1.5 rounded-md text-sm font-medium hover:bg-rose-600 flex items-center justify-center gap-1">
                   Get Involved
                   <ArrowRightAltIcon className="h-3 w-3" />

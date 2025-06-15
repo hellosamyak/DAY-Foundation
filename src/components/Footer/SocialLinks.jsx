@@ -31,7 +31,7 @@ export default function SocialLinks() {
     },
     {
       icon: YouTubeIcon,
-      href: "https://www.youtube.com",
+      href: "https://youtube.com/@dayfoundation_ngo?feature=shared",
       label: "Visit our YouTube Channel",
     },
   ];

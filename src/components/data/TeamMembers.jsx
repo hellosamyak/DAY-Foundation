@@ -10,6 +10,7 @@ const generateTeamMembers = (members, team) => {
       ...member,
       image: imageUrl,
       fallbackImage,
+      preload: index === 0,
     };
   });
 };

@@ -162,6 +162,7 @@ export default function MembersCarousel({
                       <img
                         src={slide.image}
                         alt={slide.name}
+                        loading="lazy"
                         onError={(e) => {
                           e.target.src = slide.fallbackImage;
                           e.target.onerror = null;

@@ -29,6 +29,32 @@ export default function Footer() {
             <SocialLinks />
           </div>
         </div>
+        <div className="border-t border-gray-800 pt-6 text-center text-xs text-gray-400 sm:text-sm">
+          <p className="text-sm text-gray-400 text-center">
+            Designed & Developed by{" "}
+            <a
+              href="https://www.linkedin.com/in/aman-raj-tiwari-231a30253/"
+              className="text-gray-300 hover:text-rose-400"
+            >
+              Aman
+            </a>
+            ,{" "}
+            <a
+              href="https://www.linkedin.com/in/priyanshi-kapse-2b4011326/"
+              className="text-gray-300 hover:text-rose-400"
+            >
+              Priyanshi
+            </a>{" "}
+            &{" "}
+            <a
+              href="https://www.linkedin.com/in/samyak-jain-sj1208/"
+              className="text-gray-300 hover:text-rose-400"
+            >
+              Samyak
+            </a>
+            .
+          </p>
+        </div>
         <div className="border-t border-gray-800 pt-6 text-center text-xs sm:text-sm">
           © {new Date().getFullYear()} DAY Foundation. All rights reserved.
         </div>
